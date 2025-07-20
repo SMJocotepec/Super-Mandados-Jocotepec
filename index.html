@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Negocio - Página Principal</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #333;
+    scroll-behavior: smooth; /* para scroll suave */
+  }
+  header {
+    background: #1E3A8A; /* azul entre marino y cielo */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+  header .logo {
+    flex-shrink: 0;
+  }
+  header .logo img {
+    height: 100px; /* tamaño del logo */
+    display: block;
+    animation: logoLatido 3s ease-in-out infinite;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  main {
+    padding: 140px 20px 20px; /* espacio para header fijo + carrusel */
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  section {
+  margin-bottom: 60px;
+  scroll-margin-top: 120px; /* compensa la altura del header fijo */
+  }
+  h1, h2 {
+    color: #12275E; /* azul más oscuro para títulos */
+  }
+  footer {
+    background: #1E3A8A;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+
+  /* Estilos para el carrusel debajo del header */
+  .carousel {
+    max-width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 150px; /* para dejar espacio desde el header */
+    position: relative;
+    height: auto; /* altura automática para que crezca con la imagen */
+    background-color: #fff; /* fondo blanco para espacios vacíos */
+  }
+  .carousel img {
+    width: 100%;
+    height: auto;  /* auto para mantener proporción */
+    object-fit: contain; /* muestra la imagen completa sin recortar */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .carousel img.active {
+    display: block;
+    position: relative;
+  }
+
+  /* Animación logo */
+  @keyframes logoLatido {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="Logo.JPG" alt="Logotipo" />
+  </div>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#tarifas">Tarifas</a>
+    <a href="#horarios">Horarios</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#sm-negocios">SM Negocios</a>
+    <a href="#responsabilidad-social">Responsabilidad Social</a>
+  </nav>
+</header>
+
+<div class="carousel">
+  <img src="Primerpublicidad.JPG" alt="Publicidad 1" class="active" />
+  <img src="Publicidad 1.JPG" alt="Publicidad 2" />
+  <img src="Publicidad 2.JPG" alt="Publicidad 3" />
+  <img src="Publicidad 3.JPG" alt="Publicidad 4" />
+  <img src="001.JPG" alt="Publicidad 5" />
+</div>
+
+<main>
+  <section id="inicio">
+    <h1>Bienvenido a Súper Mandados Jocotepec</h1>
+    <p>Aquí puedes poner una breve presentación sobre tu empresa o negocio.</p>
+  </section>
+
+  <section id="tarifas">
+    <h2>Tarifas</h2>
+    <p>Recuerda que en SM analizamos el precio justo al servicio de envío, es por eso que un envío dentro de Jocotepec centro, La loma, Carrizal, Nextipac y hasta el Crucero de Jocotepec, solo te cuesta $25.00 (aplica cargo adicional por escala).</p>
+  </section>
+
+  <section id="horarios">
+    <h2>Horarios</h2>
+    <p>Lunes a Viernes de 09:00 AM a 05:00 PM -Sábados y domingos de 09:00 a 03:00 PM.</p>
+  </section>
+
+  <section id="contacto">
+  <h2>Contacto</h2>
+  <p>Puedes comunicarte con nosotros a través de WhatsApp o visitar nuestra página en Facebook:</p>
+
+  <div class="contact-buttons">
+    <a href="https://wa.me/523310524572" target="_blank" class="whatsapp-button">WhatsApp</a>
+    <a href="https://web.facebook.com/people/S%C3%BAper-Mandados-Jocotepec/61557500652286/?_rdc=1&_rdr#" target="_blank" class="facebook-button">Facebook</a>
+  </div>
+</section>
+
+  <section id="sm-negocios">
+    <h2>SM Negocios</h2>
+    <p>En SM Negocios encontrarás un aliado para cubrir tus necesidades comerciales en cuanto a servicio de envíos a domicilio. Contamos con 3 modalidades de servicio, SM Negocios 15, SM Negocios 20 y SM Negocios 120 Pide más informes al Whatsapp o al correo electrónico a nuestra cuenta oficial <a href="mailto:supermandadosjocotepec@gmail.com" class="email-button">dando clikc aquí.</a>.</p>
+  </section>
+
+  <section id="responsabilidad-social">
+    <h2>Responsabilidad Social</h2>
+    <p>Contamos con dos movimientos con finalidad solidaria y sin fines de lucro, SM 1er Escala y MotoLavado Con causa. Estas actividades se realizan con la intención de generar donativos a la comunidad donde tenemos presencia ante situaciónes desafortunadas.</p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Tu Negocio. Todos los derechos reservados.
+</footer>
+
+<script>
+  // JavaScript para carrusel de imágenes
+  const slides = document.querySelectorAll('.carousel img');
+  let currentSlide = 0;
+
+  function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide+1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+
+  setInterval(nextSlide, 3000); // cambia cada 3 segundos
+</script>
+
+</body>
+</html>
